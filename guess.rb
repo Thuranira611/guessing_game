@@ -9,7 +9,7 @@ def guess()
     attempt_limit = 3
     outOfAttempt = false
 
-    while user_secret != adsecret
+    while user_secret != adsecret and !outOfAttempt
          
      if attempt < attempt_limit
        puts "Enter a Guess (Hint:sentence starts with 'v' and ends with 'b') :"
@@ -21,9 +21,11 @@ def guess()
      end
     end
     if outOfAttempt
-     puts "you lose"   
+     puts "you lose"
+    else
+        puts "you win"   
     end
-  puts "you win"  
+ 
     
 end
 guess()
